@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Management System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Attendance Management System</h1>
+  </header>
+  <main>
+    <section class="date-picker">
+      <label for="attendance-date">Select Date:</label>
+      <input type="date" id="attendance-date">
+    </section>
+    <section class="student-management">
+      <h2>Manage Students</h2>
+      <div class="form-group">
+        <input type="text" id="student-name" placeholder="Enter Student Name">
+        <input type="text" id="student-roll" placeholder="Enter Roll Number">
+        <button id="add-student">Add Student</button>
+      </div>
+      <table id="student-table">
+        <thead>
+          <tr>
+            <th>Roll Number</th>
+            <th>Name</th>
+            <th>Attendance</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Student rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </section>
+    <section class="attendance-marking">
+      <h2>Mark Attendance</h2>
+      <button id="mark-all-present">Mark All Present</button>
+      <button id="mark-all-absent">Mark All Absent</button>
+      <button id="submit-attendance">Submit Attendance</button>
+    </section>
+    <div id="confirmation-modal" class="modal hidden">
+        <div class="modal-content">
+          <p>Do you want to download the attendance as an Excel file?</p>
+          <button id="download-yes">Yes</button>
+          <button id="download-no">No</button>
+        </div>
+      </div>  
+  </main>
+  <footer>
+    <p>Attendance Management System © 2025</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
